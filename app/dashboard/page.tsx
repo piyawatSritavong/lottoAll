@@ -22,7 +22,7 @@ export default function DashboardPage() {
             {LOTTOROUND.filter(
               (itemLR) => itemLR.btype_code === itemTL.btype_code
             )
-              .sort((a, b) => (a.status === "OPN" ? -1 : 1)) // เรียงลำดับที่มีสถานะ OPN ขึ้นก่อน
+              .sort((a) => (a.status === "OPN" ? -1 : 1)) // เรียงลำดับที่มีสถานะ OPN ขึ้นก่อน
               .map((filtered, lrIndex) => (
                 <div
                   key={lrIndex}
