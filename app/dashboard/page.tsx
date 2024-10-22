@@ -22,7 +22,7 @@ export default function DashboardPage() {
             {LOTTOROUND.filter(
               (itemLR) => itemLR.btype_code === itemTL.btype_code
             )
-              .sort((a) => (a.status === "OPN" ? -1 : 1)) // เรียงลำดับที่มีสถานะ OPN ขึ้นก่อน
+              .sort((a) => (a.status === "OPN" ? -1 : 1))
               .map((filtered, lrIndex) => (
                 <div
                   key={lrIndex}
@@ -34,10 +34,11 @@ export default function DashboardPage() {
                 >
                   <div>
                     <Image
-                      src={"/assets/vn.png"}
-                      alt="Logo"
+                      src={`/assets/${filtered.nation}.png`} // นำค่า nation มาแทนที่
+                      alt={`Logo of ${filtered.nation}`} // อาจใช้เพื่อช่วยในการเข้าถึง
                       width={100}
                       height={100}
+                      className="w-[100px] h-[66px]"
                     />
                   </div>
                   <div className="mx-auto">
