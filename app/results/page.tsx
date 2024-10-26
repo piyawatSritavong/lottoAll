@@ -75,26 +75,6 @@ function ResultsPage() {
           </Table>
         </div>
       ))}
-
-      {/* {LOTTOLIST.map((itemTL, index) => (
-        <div key={index}>
-          <h1>{itemTL.btype_name}</h1>
-          <div className="grid auto-rows-min gap-4 md:grid-cols-3">
-            {LOTTORESULT.filter(
-              (itemLR) => itemLR.btype_code === itemTL.btype_code
-            ).map((filtered, lrIndex) => (
-              <div key={lrIndex}>
-                <div className="mx-auto">
-                  <p className="text-xl font-bold">{filtered.lot_name}</p>
-                  <div>
-                    <p>{convertDate(filtered.rounddate)}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      ))} */}
     </div>
   );
 }

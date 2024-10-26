@@ -56,7 +56,7 @@ export default function RootLayout({
               ))}
             </header>
             <Suspense>
-              <div className="container mx-auto p-4">{children}</div>
+              <div className="p-4">{children}</div>
             </Suspense>
           </SidebarInset>
         </SidebarProvider>

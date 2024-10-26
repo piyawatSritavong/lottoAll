@@ -1,10 +1,13 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { useEffect, useRef } from "react";
+import { Input } from "@/components/ui/input";
+import { useEffect, useRef, useState } from "react";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
 function BetsPage() {
   const allButtonRef = useRef<HTMLButtonElement>(null);
+  const [selectedValue, setSelectedValue] = useState("อ้างอิง"); 
 
   useEffect(() => {
     if (allButtonRef.current) {
@@ -34,17 +37,16 @@ function BetsPage() {
           ยกเลิก
         </Button>
 
-        <select className="border border-zinc-300 rounded-lg px-4 py-2">
-          <option>อ้างอิง</option>
-          <option>ตัวเลือก 1</option>
-          <option>ตัวเลือก 2</option>
-        </select>
+        <Select value={selectedValue} onValueChange={setSelectedValue}>
+          <SelectTrigger className="w-[180px]">
+            <SelectValue placeholder="Select" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="อ้างอิง">อ้างอิง</SelectItem>
+          </SelectContent>
+        </Select>
 
-        <input
-          type="text"
-          placeholder="ค้นหา"
-          className="border border-zinc-300 rounded-lg px-4 py-2 flex-grow"
-        />
+        <Input type="text" placeholder="ค้นหา" />
 
         <Button className="border border-black hover:bg-black hover:text-white focus:bg-black focus:text-white">
           ค้นหา

@@ -79,48 +79,46 @@ function FinancePage() {
         </Button>
       </div>
 
-      <div className="container mx-auto p-4">
-        <Table>
-          <TableHeader>
-            <TableRow>
-              <TableHead className="text-center">ตลาด</TableHead>
-              <TableHead className="text-center">งวด</TableHead>
-              <TableHead className="text-center">ยอด</TableHead>
-              <TableHead className="text-center">ส่วนลด</TableHead>
-              <TableHead className="text-center">ยอดส่ง</TableHead>
-              <TableHead className="text-center">ถูกรางวัล</TableHead>
-              <TableHead className="text-center">สรุป</TableHead>
-              <TableHead className="text-center">แสดง</TableHead>
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-            {/* ข้อมูลแต่ละแถว */}
-            <TableRow>
-              <TableCell className="text-center">
-                <Image
-                  src="/assets/vn.png"
-                  alt="Logo"
-                  className="mx-auto"
-                  width={80}
-                  height={100}
-                />
-              </TableCell>
-              <TableCell className="text-center">123</TableCell>
-              <TableCell className="text-center">10000000</TableCell>
-              <TableCell className="text-center">10000000</TableCell>
-              <TableCell className="text-center">10000000</TableCell>
-              <TableCell className="text-center">10000000</TableCell>
-              <TableCell className="text-center">10000000</TableCell>
-              <TableCell className="flex justify-center">
-                <Button variant={"link"}>
-                  <Search />
-                </Button>
-              </TableCell>
-            </TableRow>
-            {/* เพิ่มแถวเพิ่มเติมตามต้องการ */}
-          </TableBody>
-        </Table>
-      </div>
+      <Table>
+        <TableHeader>
+          <TableRow>
+            <TableHead className="text-center">ตลาด</TableHead>
+            <TableHead className="text-center">งวด</TableHead>
+            <TableHead className="text-center">ยอด</TableHead>
+            <TableHead className="text-center">ส่วนลด</TableHead>
+            <TableHead className="text-center">ยอดส่ง</TableHead>
+            <TableHead className="text-center">ถูกรางวัล</TableHead>
+            <TableHead className="text-center">สรุป</TableHead>
+            <TableHead className="text-center">แสดง</TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          {/* ข้อมูลแต่ละแถว */}
+          <TableRow>
+            <TableCell className="text-center">
+              <Image
+                src="/assets/vn.png"
+                alt="Logo"
+                className="mx-auto"
+                width={80}
+                height={100}
+              />
+            </TableCell>
+            <TableCell className="text-center">123</TableCell>
+            <TableCell className="text-center">10000000</TableCell>
+            <TableCell className="text-center">10000000</TableCell>
+            <TableCell className="text-center">10000000</TableCell>
+            <TableCell className="text-center">10000000</TableCell>
+            <TableCell className="text-center">10000000</TableCell>
+            <TableCell className="flex justify-center">
+              <Button variant={"link"}>
+                <Search />
+              </Button>
+            </TableCell>
+          </TableRow>
+          {/* เพิ่มแถวเพิ่มเติมตามต้องการ */}
+        </TableBody>
+      </Table>
     </div>
   );
 }
