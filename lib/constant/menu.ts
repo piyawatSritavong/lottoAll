@@ -15,13 +15,13 @@ export const MENU = [
         url: "/finance", 
     },
     {
-        nameEN: "Lottery",
+        nameEN: "Results",
         nameTH: "ผลหวย", 
-        url: "/lottery", 
+        url: "/results", 
     },
     {
-        nameEN: "Results",
+        nameEN: "Link",
         nameTH: "ออกผล", 
-        url: "/results", 
+        url: "/link", 
     },
 ]

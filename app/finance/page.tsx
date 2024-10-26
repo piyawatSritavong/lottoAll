@@ -13,7 +13,7 @@ import {
 import Image from "next/image";
 import { Search } from "lucide-react";
 
-export default function FinancePage() {
+function FinancePage() {
   const todayButtonRef = useRef<HTMLButtonElement>(null);
   const allButtonRef = useRef<HTMLButtonElement>(null);
 
@@ -28,7 +28,7 @@ export default function FinancePage() {
   }, []);
 
   return (
-    <div className="container mx-auto p-4">
+    <div>
       <div className="flex space-x-2 mb-4">
         <Button
           ref={todayButtonRef}
@@ -124,3 +124,5 @@ export default function FinancePage() {
     </div>
   );
 }
+
+export default FinancePage;

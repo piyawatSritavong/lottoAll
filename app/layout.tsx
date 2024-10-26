@@ -12,6 +12,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { MENU } from "@/lib/constant/menu";
 import Link from "next/link";
+import { Suspense } from "react";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -54,7 +55,9 @@ export default function RootLayout({
                 </div>
               ))}
             </header>
-            {children}
+            <Suspense>
+              <div className="container mx-auto p-4">{children}</div>
+            </Suspense>
           </SidebarInset>
         </SidebarProvider>
       </body>

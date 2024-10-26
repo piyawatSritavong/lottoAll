@@ -1,18 +1,38 @@
 "use client";
 
-export default function BetsPage() {
+import { Button } from "@/components/ui/button";
+import { useEffect, useRef } from "react";
+
+function BetsPage() {
+  const allButtonRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    if (allButtonRef.current) {
+      allButtonRef.current.focus();
+    }
+  }, []);
   return (
-    <div className="flex flex-1 flex-col gap-4 p-4">
-      <div className="flex items-center space-x-2 p-4 bg-background">
-        <button className="bg-primary text-primary-foreground px-4 py-2 rounded-lg">
+    <div className="flex flex-1 flex-col gap-4">
+      <div className="flex items-center space-x-2 bg-background">
+        <Button
+          ref={allButtonRef}
+          variant={"outline"}
+          className="border border-black hover:bg-black hover:text-white focus:bg-black focus:text-white"
+        >
           ทั้งหมด
-        </button>
-        <button className="border border-green-500 text-green-500 px-4 py-2 rounded-lg">
+        </Button>
+        <Button
+          variant={"outline"}
+          className="border border-green-500 text-green-500 hover:bg-green-500 hover:text-white focus:bg-green-500 focus:text-white"
+        >
           รอผล
-        </button>
-        <button className="border border-red-500 text-red-500 px-4 py-2 rounded-lg">
+        </Button>
+        <Button
+          variant={"outline"}
+          className="border border-red-500 text-red-500 hover:bg-red-500 hover:text-white focus:bg-red-500 focus:text-white"
+        >
           ยกเลิก
-        </button>
+        </Button>
 
         <select className="border border-zinc-300 rounded-lg px-4 py-2">
           <option>อ้างอิง</option>
@@ -26,10 +46,12 @@ export default function BetsPage() {
           className="border border-zinc-300 rounded-lg px-4 py-2 flex-grow"
         />
 
-        <button className="bg-primary text-primary-foreground px-4 py-2 rounded-lg">
+        <Button className="border border-black hover:bg-black hover:text-white focus:bg-black focus:text-white">
           ค้นหา
-        </button>
+        </Button>
       </div>
     </div>
   );
 }
+
+export default BetsPage;
